@@ -1,0 +1,81 @@
+body { 
+  font-family: Arial, sans-serif; 
+  text-align: center; 
+  background: url('imge/767.jpg');
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.robot {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: url('imge/original-3e652baea723121800ca0068452af00e.gif') no-repeat center;
+  background-size: contain;
+  animation: moveRobot 10s infinite alternate ease-in-out;
+}
+
+@keyframes moveRobot {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(80vw, 20vh) rotate(10deg); }
+  100% { transform: translate(0, 40vh) rotate(-10deg); }
+}
+
+.chatbox { 
+  width: 400px; 
+  margin: 50px auto; 
+  border: 1px solid #ccc; 
+  padding: 15px; 
+  border-radius: 10px; 
+  background: rgba(255, 255, 255, 0.9); 
+  position: relative;
+  z-index: 10;
+}
+
+.chat-log { 
+  height: 200px; 
+  overflow-y: auto; 
+  border-bottom: 1px solid #ccc; 
+  padding-bottom: 10px; 
+  text-align: left;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestions {
+  display: none;
+  border: 1px solid #ccc;
+  background: white;
+  position: absolute;
+  width: 200px;
+  z-index: 1000;
+}
+
+.suggestions div {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.suggestions div:hover {
+  background: #f0f0f0;
+}
+input::placeholder {
+color: #4caf50; /* Change this to any color you prefer */
+font-size: 16px; /* Optional: Adjust font size */
+}
+h1{
+  color: #f0f0f0;
+}
+p{
+  color: #f0f0f0;
+}

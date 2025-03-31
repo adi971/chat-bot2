@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucknow Transport Chatbot</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-message">
+      <h1>Welcome to the je JEBSAVE!</h1>
+      <p>Enter a Pickup and Drop Location to find the best route with fares and nearby places.</p>
+    </div>
+    <div class="robot"></div>
+    <h1 style="color: white; text-shadow: 2px 2px 5px black;">JS JEBSAVE</h1>
+    <div class="chatbox">
+        <div class="chat-log" id="chat-log"></div>
+        <div class="input-container">
+            <input type="text" id="pickup" placeholder="Enter Pickup Location..." onkeyup="showSuggestions(this.value, 'pickup')">
+            <div class="suggestions" id="pickup-suggestions"></div>
+            <input type="text" id="drop" placeholder="Enter Drop Location..." onkeyup="showSuggestions(this.value, 'drop')">
+            <div class="suggestions" id="drop-suggestions"></div>
+            <button onclick="sendMessage()">Find Route</button>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
